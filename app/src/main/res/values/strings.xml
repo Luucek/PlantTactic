@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PlantTactic</string>
+    <string name="remember">Pamiętaj</string>
+
+    <!-- Text related to Login fragment -->
+
+    <string name="login_button_text">Zaloguj się:</string>
+
+    <!-- Text related to Home fragment -->
+
+    <string name="user_rooms_text">Twoje Pokoje:</string>
+    <string name="dynamic_room_nr_text">Pokój</string>
+</resources>
