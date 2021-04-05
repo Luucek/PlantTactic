@@ -17,6 +17,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_addRoomFragment"
+            app:destination="@id/addRoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -35,7 +42,7 @@
         android:id="@+id/welcomeFragment"
         android:name="edu.zut.wi.planttactic.WelcomeFragment"
         android:label="{username}"
-        tools:layout="@layout/fragment_welcome" >
+        tools:layout="@layout/fragment_welcome">
         <argument
             android:name="username"
             app:argType="string" />
@@ -70,4 +77,17 @@
         android:name="edu.zut.wi.planttactic.HistoryFragment"
         android:label="History"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="edu.zut.wi.planttactic.AddRoomFragment"
+        android:label="Add a Room"
+        tools:layout="@layout/fragment_add_room">
+        <action
+            android:id="@+id/action_addRoomFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_top"
+            app:exitAnim="@anim/slide_out_bottom"
+            app:popEnterAnim="@anim/slide_in_bottom"
+            app:popExitAnim="@anim/slide_out_top" />
+    </fragment>
 </navigation>

@@ -10,4 +10,7 @@
 
     <string name="user_rooms_text">Twoje Pokoje:</string>
     <string name="dynamic_room_nr_text">Pokój</string>
+    <string name="room_name_text">Nazwa pokoju</string>
+    <string name="room_photo_text">Zdjęcie</string>
+    <string name="add_room_button">Dodaj pokój</string>
 </resources>
