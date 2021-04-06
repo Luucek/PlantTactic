@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="edu.zut.wi.planttactic.HomeFragment"
-        android:label="Home"
+        android:label="@string/homeF"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="edu.zut.wi.planttactic.LoginFragment"
-        android:label="Login"
+        android:label="@string/loginF"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
@@ -58,12 +58,12 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="edu.zut.wi.planttactic.SettingsFragment"
-        android:label="Settings"
+        android:label="@string/settingsF"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/termsFragment"
         android:name="edu.zut.wi.planttactic.TermsFragment"
-        android:label="Terms &amp; Conditions"
+        android:label="@string/termsAndConditionsF"
         tools:layout="@layout/fragment_terms" />
     <action
         android:id="@+id/action_global_termsFragment"
@@ -75,12 +75,12 @@
     <fragment
         android:id="@+id/historyFragment"
         android:name="edu.zut.wi.planttactic.HistoryFragment"
-        android:label="History"
+        android:label="@string/historyF"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/addRoomFragment"
         android:name="edu.zut.wi.planttactic.AddRoomFragment"
-        android:label="Add a Room"
+        android:label="@string/addRoomF"
         tools:layout="@layout/fragment_add_room">
         <action
             android:id="@+id/action_addRoomFragment_to_homeFragment"

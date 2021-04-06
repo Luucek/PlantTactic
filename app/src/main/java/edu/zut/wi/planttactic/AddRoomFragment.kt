@@ -27,11 +27,4 @@ class AddRoomFragment : Fragment(R.layout.fragment_add_room) {
             findNavController().navigate(action)
         }
     }
-
-//    private fun saveRoomToFile(room: Room) {
-//
-//        context?.openFileOutput(room.name, Context.MODE_PRIVATE).use { output ->
-//            output?.write(room.getJSONstring().toByteArray())
-//        }
-//    }
 }

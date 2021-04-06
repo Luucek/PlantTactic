@@ -50,7 +50,7 @@ class Room() {
                 }
             }
 
-            userRooms.add(Room("addButton", "addButton"))
+            userRooms.add(Room("addRoomButton", "addRoomButton"))
 
             return userRooms
         }

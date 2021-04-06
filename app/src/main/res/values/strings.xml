@@ -1,6 +1,24 @@
 <resources>
+
+    <!-- Translation unnecessary -->
+
+    <string name="placeholder">Placeholder</string>
+
+    <!-- Text global -->
+
     <string name="app_name">PlantTactic</string>
     <string name="remember">Pamiętaj</string>
+    <string name="settings">Ustawienia</string>
+    <string name="termsAndConditions">Warunki użytkowania</string>
+
+    <!-- Text related to fragments names -->
+
+    <string name="homeF">Dom</string>
+    <string name="loginF">Zaloguj się</string>
+    <string name="settingsF">Ustawienia</string>
+    <string name="termsAndConditionsF">Warunki użytkowania</string>
+    <string name="historyF">Historia</string>
+    <string name="addRoomF">Dodaj pokój</string>
 
     <!-- Text related to Login fragment -->
 
@@ -13,4 +31,6 @@
     <string name="room_name_text">Nazwa pokoju</string>
     <string name="room_photo_text">Zdjęcie</string>
     <string name="add_room_button">Dodaj pokój</string>
+    <string name="homeLogoDesc">Logo w górnej części HomeFragment</string>
+
 </resources>

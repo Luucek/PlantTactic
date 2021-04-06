@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/parent_layout"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:padding="15dp">
+    android:layout_margin="15dp"
+    android:background="@color/light_grey">
 
     <ImageView
         android:id="@+id/room_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher" />
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="@string/placeholder" />
 
     <TextView
         android:id="@+id/room_name"
@@ -18,9 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/room_image"
         android:layout_centerHorizontal="true"
-        android:text="Placeholder"
+        android:layout_marginTop="10dp"
+        android:text="@string/placeholder"
         android:textColor="#000"
-        android:textSize="17sp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="17sp" />
 
 </RelativeLayout>

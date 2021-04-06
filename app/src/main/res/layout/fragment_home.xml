@@ -3,27 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".HomeFragment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/button_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login_button_text" />
 
         <ImageView
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_marginTop="70dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/room_1" />
+            app:srcCompat="@drawable/room_1"
+            android:contentDescription="@string/homeLogoDesc" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,10 +30,7 @@
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
+
             tools:listitem="@layout/layout_room_listitem" />
-
-
-    </LinearLayout>
-
 
 </LinearLayout>
