@@ -1,6 +1,7 @@
 package edu.zut.wi.planttactic
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
@@ -31,6 +31,7 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView
 
         if (holder.roomName.text == "addRoomButton") {
 
+            holder.roomName.visibility = View.GONE
             holder.roomImage.setImageResource(R.drawable.ic_add)
 
             holder.itemView.setOnClickListener { view ->
@@ -38,7 +39,14 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView
                 view.findNavController().navigate(R.id.action_homeFragment_to_addRoomFragment)
             }
         } else {
-            holder.roomImage.setImageResource(R.drawable.room_1)
+            //TODO: Change this to somehow permanently assign image to corresponding room
+            val imgs: TypedArray = context!!.resources.obtainTypedArray(R.array.images)
+            val rand = Random()
+            val rndInt = rand.nextInt(imgs.length())
+            val resID = imgs.getResourceId(rndInt, 0)
+            holder.roomImage.setImageResource(resID)
+
+            imgs.recycle()
 
             holder.parentLayout.setOnClickListener {
                 Log.d(TAG, "onClick: clicked on: " + rooms[position].name)
