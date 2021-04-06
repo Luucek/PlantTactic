@@ -20,20 +20,18 @@ class AddRoomFragment : Fragment(R.layout.fragment_add_room) {
             val roomName = edit_text_room_name.text.toString()
             val imageName = edit_text_room_photo.text.toString()
 
-            var room = Room()
-            room.name = roomName
-            room.imageName = imageName
-            saveRoomToFile(room)
+            val room = Room(roomName, imageName)
+            room.saveToFile(this.context)
 
             val action = AddRoomFragmentDirections.actionAddRoomFragmentToHomeFragment()
             findNavController().navigate(action)
         }
     }
 
-    private fun saveRoomToFile(room: Room) {
-
-        context?.openFileOutput(room.name, Context.MODE_PRIVATE).use { output ->
-            output?.write(room.getJSONstring().toByteArray())
-        }
-    }
+//    private fun saveRoomToFile(room: Room) {
+//
+//        context?.openFileOutput(room.name, Context.MODE_PRIVATE).use { output ->
+//            output?.write(room.getJSONstring().toByteArray())
+//        }
+//    }
 }

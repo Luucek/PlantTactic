@@ -4,7 +4,7 @@
 
     <!-- Text related to Login fragment -->
 
-    <string name="login_button_text">Zaloguj się:</string>
+    <string name="login_button_text">Zaloguj się</string>
 
     <!-- Text related to Home fragment -->
 
