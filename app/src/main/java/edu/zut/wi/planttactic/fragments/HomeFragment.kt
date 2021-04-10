@@ -1,14 +1,14 @@
-package edu.zut.wi.planttactic
+package edu.zut.wi.planttactic.fragments
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_home.*
+import edu.zut.wi.planttactic.R
+import edu.zut.wi.planttactic.RoomsViewAdapter
+import edu.zut.wi.planttactic.classes.Room
 
 
 class HomeFragment : Fragment(R.layout.fragment_home) {

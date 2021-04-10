@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center"
-    tools:context=".HomeFragment">
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment">
 
-        <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="70dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/room_1"
-            android:contentDescription="@string/homeLogoDesc" />
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="70dp"
+        android:contentDescription="@string/homeLogoDesc"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/room_1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/user_rooms_text"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/user_rooms_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/roomsView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/roomsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
 
-            tools:listitem="@layout/layout_room_listitem" />
+        tools:listitem="@layout/layout_room_listitem" />
 
 </LinearLayout>

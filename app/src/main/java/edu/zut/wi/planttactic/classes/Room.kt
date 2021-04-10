@@ -1,4 +1,4 @@
-package edu.zut.wi.planttactic
+package edu.zut.wi.planttactic.classes
 
 import android.content.Context
 import android.util.Log

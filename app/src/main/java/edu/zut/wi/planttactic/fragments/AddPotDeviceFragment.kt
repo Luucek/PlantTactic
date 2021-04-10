@@ -1,13 +1,14 @@
-package edu.zut.wi.planttactic
+package edu.zut.wi.planttactic.fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import edu.zut.wi.planttactic.R
+import edu.zut.wi.planttactic.classes.PotDevice
+import edu.zut.wi.planttactic.classes.Room
 import kotlinx.android.synthetic.main.fragment_add_potdevice.*
-import kotlinx.android.synthetic.main.fragment_add_room.*
 
 class AddPotDeviceFragment : Fragment(R.layout.fragment_add_potdevice) {
 

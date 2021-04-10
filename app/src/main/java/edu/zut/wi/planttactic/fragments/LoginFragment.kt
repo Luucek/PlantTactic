@@ -1,9 +1,10 @@
-package edu.zut.wi.planttactic
+package edu.zut.wi.planttactic.fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import edu.zut.wi.planttactic.R
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment(R.layout.fragment_login) {

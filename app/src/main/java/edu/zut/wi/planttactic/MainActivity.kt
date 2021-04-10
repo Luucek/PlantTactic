@@ -1,11 +1,9 @@
 package edu.zut.wi.planttactic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-    import android.widget.LinearLayout
-import androidx.fragment.app.FragmentContainerView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController

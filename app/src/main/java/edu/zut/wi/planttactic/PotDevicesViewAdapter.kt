@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import edu.zut.wi.planttactic.classes.PotDevice
 import java.util.*
 
 

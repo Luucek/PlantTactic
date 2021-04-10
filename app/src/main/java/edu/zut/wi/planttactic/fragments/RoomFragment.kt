@@ -1,4 +1,4 @@
-package edu.zut.wi.planttactic
+package edu.zut.wi.planttactic.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import edu.zut.wi.planttactic.PotDevicesViewAdapter
+import edu.zut.wi.planttactic.R
+import edu.zut.wi.planttactic.classes.PotDevice
+import edu.zut.wi.planttactic.classes.Room
 import kotlinx.android.synthetic.main.fragment_room.*
 
 class RoomFragment : Fragment(R.layout.fragment_room) {
