@@ -33,6 +33,8 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView
 
             holder.roomName.visibility = View.GONE
             holder.roomImage.setImageResource(R.drawable.ic_add)
+            holder.roomImage.layoutParams.width = 180
+            holder.roomImage.layoutParams.height = 180
 
             holder.itemView.setOnClickListener { view ->
                 Log.d(TAG, "onClick: clicked on Add Room Button")
@@ -48,8 +50,11 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView
 
             imgs.recycle()
 
-            holder.parentLayout.setOnClickListener {
+            holder.parentLayout.setOnClickListener { view ->
                 Log.d(TAG, "onClick: clicked on: " + rooms[position].name)
+
+                val action = RoomFragmentDirections.actionGlobalRoomFragment(rooms[position].name)
+                view.findNavController().navigate(action)
             }
         }
     }

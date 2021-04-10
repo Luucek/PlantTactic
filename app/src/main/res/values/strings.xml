@@ -19,6 +19,7 @@
     <string name="termsAndConditionsF">Warunki użytkowania</string>
     <string name="historyF">Historia</string>
     <string name="addRoomF">Dodaj pokój</string>
+    <string name="addPotDeviceF">Dodaj Doniczkę</string>
 
     <!-- Text related to Login fragment -->
 
@@ -27,10 +28,22 @@
     <!-- Text related to Home fragment -->
 
     <string name="user_rooms_text">Twoje Pokoje:</string>
-    <string name="dynamic_room_nr_text">Pokój</string>
+    <string name="homeLogoDesc">Logo w górnej części HomeFragment</string>
+
+    <!-- Text related to Add Room fragment -->
+
     <string name="room_name_text">Nazwa pokoju</string>
     <string name="room_photo_text">Zdjęcie</string>
     <string name="add_room_button">Dodaj pokój</string>
-    <string name="homeLogoDesc">Logo w górnej części HomeFragment</string>
+
+    <!-- Text related to Room fragment -->
+    <string name="user_pot_devices_text">Twoje Doniczki:</string>
+    <string name="fab_room_desc">Przycisk dodający urządzenie</string>
+
+    <!-- Text related to Add Device fragment -->
+
+    <string name="device_name_text">Nazwa doniczki</string>
+    <string name="device_photo_text">Zdjęcie</string>
+    <string name="add_device_button">Dodaj doniczkę</string>
 
 </resources>

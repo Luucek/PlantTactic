@@ -3,28 +3,24 @@
     android:id="@+id/parent_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
-    android:background="@color/light_grey">
+    android:layout_margin="15dp">
 
     <ImageView
-        android:id="@+id/room_image"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/device_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:contentDescription="@string/placeholder"
-        android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher" />
 
     <TextView
-        android:id="@+id/room_name"
+        android:id="@+id/device_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/room_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/device_image"
         android:text="@string/placeholder"
         android:textColor="#000"
-        android:textSize="17sp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -10,6 +10,7 @@ class Room() {
 
     var name: String = ""
     var imageName: String = ""
+    var devices: ArrayList<PotDevice> = ArrayList()
 
     constructor(name: String, imageName: String) : this() {
         this.name = name
@@ -43,8 +44,8 @@ class Room() {
 
             if (files?.isNotEmpty() == true) {
 
-                files.forEach { file: File ->
-                    val json = file.readText(Charsets.UTF_8)
+                files.forEach {
+                    val json = it?.readText(Charsets.UTF_8)
                     val room: Room = Gson().fromJson(json, Room::class.java)
                     userRooms.add(room)
                 }
@@ -54,5 +55,22 @@ class Room() {
 
             return userRooms
         }
+
+        fun getRoomFromName(context: Context?, roomName: String): Room {
+
+            val path: String = context?.filesDir.toString() + "/rooms"
+
+            val directory = File(path)
+            val files = directory.listFiles()
+
+            val file = files?.first { it.name == roomName }
+            val json = file?.readText(Charsets.UTF_8)
+
+            return Gson().fromJson(json, Room::class.java)
+        }
+    }
+
+    fun addDevice(device: PotDevice) {
+        this.devices.add(device)
     }
 }

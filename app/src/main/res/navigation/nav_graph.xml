@@ -90,4 +90,43 @@
             app:popEnterAnim="@anim/slide_in_bottom"
             app:popExitAnim="@anim/slide_out_top" />
     </fragment>
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="edu.zut.wi.planttactic.RoomFragment"
+        android:label="{roomName}"
+        tools:layout="@layout/fragment_room">
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_roomFragment_to_addPotDeviceFragment"
+            app:destination="@id/addPotDeviceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_roomFragment"
+        app:destination="@id/roomFragment"
+        app:enterAnim="@anim/slide_in_top"
+        app:exitAnim="@anim/slide_out_bottom"
+        app:popEnterAnim="@anim/slide_in_bottom"
+        app:popExitAnim="@anim/slide_out_top" />
+    <fragment
+        android:id="@+id/addPotDeviceFragment"
+        android:name="edu.zut.wi.planttactic.AddPotDeviceFragment"
+        android:label="@string/addPotDeviceF"
+        tools:layout="@layout/fragment_add_potdevice">
+        <action
+            android:id="@+id/action_addPotDeviceFragment_to_roomFragment"
+            app:destination="@id/roomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+    </fragment>
 </navigation>
