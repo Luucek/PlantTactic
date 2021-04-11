@@ -59,7 +59,6 @@ class Room() {
 
             val directory = File(path)
             val files = directory.listFiles()
-
             val file = files?.first { it.name == roomName }
             val json = file?.readText(Charsets.UTF_8)
 

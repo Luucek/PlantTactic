@@ -17,22 +17,23 @@
         android:text="@string/user_pot_devices_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_add_device"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/devicesView"
-        android:layout_alignBottom="@id/devicesView"
-        android:layout_margin="20dp"
-        android:contentDescription="@string/fab_device_desc"
-        app:srcCompat="@drawable/ic_add" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/devicesView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/user_pot_devices_text"
-
         tools:listitem="@layout/layout_device_listitem" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_room_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/devicesView"
+        android:layout_alignBottom="@id/devicesView"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_more_desc"
+        app:menu="@menu/drawer_bottom_nav_menu"
+        app:srcCompat="@drawable/ic_more_vert"
+        app:tint="@color/colorPrimaryDark" />
 
 </RelativeLayout>

@@ -21,7 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val userRooms = Room.loadSavedRooms(this.context)
 
         initRecyclerView(userRooms)
-        button_add_room.setOnClickListener {
+        fab_add_room.setOnClickListener {
             view.findNavController().navigate(R.id.action_homeFragment_to_addRoomFragment)
         }
     }

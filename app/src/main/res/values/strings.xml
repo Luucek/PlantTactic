@@ -10,6 +10,7 @@
     <string name="remember">Pamiętaj</string>
     <string name="settings">Ustawienia</string>
     <string name="termsAndConditions">Warunki użytkowania</string>
+    <string name="fab_more_desc">Przycisk z rozwijanym menu</string>
 
     <!-- Text related to fragments names -->
 
@@ -27,9 +28,8 @@
 
     <!-- Text related to Home fragment -->
 
-    <string name="user_rooms_text">POKOJE:</string>
+    <string name="user_rooms_text">POKOJE</string>
     <string name="homeLogoDesc">Logo w górnej części HomeFragment</string>
-    <string name="fab_room_desc">Przycisk dodający Pokój</string>
 
     <!-- Text related to Add Room fragment -->
 
@@ -38,8 +38,9 @@
     <string name="add_room_button">Dodaj pokój</string>
 
     <!-- Text related to Room fragment -->
-    <string name="user_pot_devices_text">DONICZKI:</string>
-    <string name="fab_device_desc">Przycisk dodający urządzenie</string>
+    <string name="user_pot_devices_text">DONICZKI</string>
+    <string name="menuitem_add">Dodaj doniczkę</string>
+    <string name="menuitem_edit">Edytuj pokój</string>
 
     <!-- Text related to Add Device fragment -->
 

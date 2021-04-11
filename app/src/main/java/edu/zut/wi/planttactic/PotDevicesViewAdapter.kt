@@ -12,7 +12,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import edu.zut.wi.planttactic.classes.PotDevice
 import edu.zut.wi.planttactic.fragments.PotDeviceFragmentDirections
-import edu.zut.wi.planttactic.fragments.RoomFragmentDirections
 import java.util.*
 
 

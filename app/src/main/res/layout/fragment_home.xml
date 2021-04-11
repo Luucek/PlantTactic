@@ -13,10 +13,10 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/homeLogoDesc"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/room_1" />
+        app:srcCompat="@mipmap/room_1" />
 
     <TextView
         android:id="@+id/rooms_list_header"
@@ -41,13 +41,15 @@
         tools:listitem="@layout/layout_room_listitem" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_add_room"
+        android:id="@+id/fab_add_room"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/roomsView"
         android:layout_alignBottom="@id/roomsView"
-        android:layout_margin="20dp"
-        android:contentDescription="@string/fab_room_desc"
-        app:srcCompat="@drawable/ic_add" />
+        android:layout_margin="16dp"
+        android:contentDescription="@string/fab_more_desc"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/colorPrimaryDark" />
 
 </RelativeLayout>

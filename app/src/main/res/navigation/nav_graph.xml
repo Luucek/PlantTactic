@@ -99,6 +99,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_roomFragment_to_editRoomFragment"
+            app:destination="@id/editRoomFragment" />
     </fragment>
     <action
         android:id="@+id/action_global_roomFragment"
@@ -139,4 +142,13 @@
         app:exitAnim="@anim/slide_out_left"
         app:popEnterAnim="@anim/slide_in_left"
         app:popExitAnim="@anim/slide_out_right" />
+    <fragment
+        android:id="@+id/editRoomFragment"
+        android:name="edu.zut.wi.planttactic.fragments.EditRoomFragment"
+        android:label="{roomName}"
+        tools:layout="@layout/fragment_edit_room">
+        <argument
+            android:name="roomName"
+            app:argType="string" />
+    </fragment>
 </navigation>

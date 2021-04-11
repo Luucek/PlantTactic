@@ -4,10 +4,10 @@
     <!-- Images from https://unsplash.com/ -->
 
     <array name="images">
-        <item>@drawable/room_1</item>
-        <item>@drawable/room_2</item>
-        <item>@drawable/room_3</item>
-        <item>@drawable/room_4</item>
+        <item>@mipmap/room_1</item>
+        <item>@mipmap/room_2</item>
+        <item>@mipmap/room_3</item>
+        <item>@mipmap/room_4</item>
     </array>
 
 </resources>
