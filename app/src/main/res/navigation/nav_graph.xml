@@ -10,13 +10,7 @@
         android:name="edu.zut.wi.planttactic.fragments.HomeFragment"
         android:label="@string/homeF"
         tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_homeFragment_to_addRoomFragment"
             app:destination="@id/addRoomFragment"
@@ -129,4 +123,20 @@
             android:name="roomName"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/potDeviceFragment"
+        android:name="edu.zut.wi.planttactic.fragments.PotDeviceFragment"
+        android:label="{deviceName}"
+        tools:layout="@layout/fragment_potdevice">
+        <argument
+            android:name="deviceName"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_potDeviceFragment"
+        app:destination="@id/potDeviceFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
 </navigation>

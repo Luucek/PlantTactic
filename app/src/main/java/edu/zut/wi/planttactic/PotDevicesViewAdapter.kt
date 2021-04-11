@@ -1,14 +1,18 @@
 package edu.zut.wi.planttactic
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import edu.zut.wi.planttactic.classes.PotDevice
+import edu.zut.wi.planttactic.fragments.PotDeviceFragmentDirections
+import edu.zut.wi.planttactic.fragments.RoomFragmentDirections
 import java.util.*
 
 
@@ -25,6 +29,13 @@ class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) : 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.deviceName.text = devices[position].name
+
+        holder.parentLayout.setOnClickListener { view ->
+            Log.d(TAG, "onClick: clicked on: " + devices[position].name)
+
+            val action = PotDeviceFragmentDirections.actionGlobalPotDeviceFragment(devices[position].name)
+            view.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

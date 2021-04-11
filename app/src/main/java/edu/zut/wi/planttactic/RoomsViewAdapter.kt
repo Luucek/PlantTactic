@@ -16,13 +16,15 @@ import edu.zut.wi.planttactic.fragments.RoomFragmentDirections
 import java.util.*
 
 
-class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView.Adapter<RoomsViewAdapter.ViewHolder>() {
+class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) :
+    RecyclerView.Adapter<RoomsViewAdapter.ViewHolder>() {
 
     private var rooms = ArrayList<Room>()
     private val context: Context?
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.layout_room_listitem, parent, false)
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.layout_room_listitem, parent, false)
         return ViewHolder(view)
     }
 
@@ -31,35 +33,23 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) : RecyclerView
 
         holder.roomName.text = rooms[position].name
 
-        if (holder.roomName.text == "addRoomButton") {
+        //TODO: Change this to somehow permanently assign image to corresponding room
+        val imgs: TypedArray = context!!.resources.obtainTypedArray(R.array.images)
+        val rand = Random()
+        val rndInt = rand.nextInt(imgs.length())
+        val resID = imgs.getResourceId(rndInt, 0)
+        holder.roomImage.setImageResource(resID)
 
-            holder.roomName.visibility = View.GONE
-            holder.roomImage.setImageResource(R.drawable.ic_add)
-            holder.roomImage.layoutParams.width = 180
-            holder.roomImage.layoutParams.height = 180
+        imgs.recycle()
 
-            holder.itemView.setOnClickListener { view ->
-                Log.d(TAG, "onClick: clicked on Add Room Button")
-                view.findNavController().navigate(R.id.action_homeFragment_to_addRoomFragment)
-            }
-        } else {
-            //TODO: Change this to somehow permanently assign image to corresponding room
-            val imgs: TypedArray = context!!.resources.obtainTypedArray(R.array.images)
-            val rand = Random()
-            val rndInt = rand.nextInt(imgs.length())
-            val resID = imgs.getResourceId(rndInt, 0)
-            holder.roomImage.setImageResource(resID)
+        holder.parentLayout.setOnClickListener { view ->
+            Log.d(TAG, "onClick: clicked on: " + rooms[position].name)
 
-            imgs.recycle()
-
-            holder.parentLayout.setOnClickListener { view ->
-                Log.d(TAG, "onClick: clicked on: " + rooms[position].name)
-
-                val action = RoomFragmentDirections.actionGlobalRoomFragment(rooms[position].name)
-                view.findNavController().navigate(action)
-            }
+            val action = RoomFragmentDirections.actionGlobalRoomFragment(rooms[position].name)
+            view.findNavController().navigate(action)
         }
     }
+
 
     override fun getItemCount(): Int {
         return rooms.size
