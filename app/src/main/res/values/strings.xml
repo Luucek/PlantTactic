@@ -48,4 +48,14 @@
     <string name="device_photo_text">Zdjęcie</string>
     <string name="add_device_button">Dodaj doniczkę</string>
 
+    <!-- Text related to Edit Room fragment -->
+
+    <string name="button_edit_room_cancel">Anuluj</string>
+    <string name="button_edit_room_save">Zapisz</string>
+    <string name="button_edit_room_delete">USUŃ POKÓJ</string>
+    <string name="edit_room_roomname">Nazwa pokoju</string>
+    <string name="edit_room_newimage">Zdjecie pokoju</string>
+    <string name="dialog_title">Usuń pokój</string>
+    <string name="dialog_message">Ten pokój zostanie usunięty:</string>
+
 </resources>

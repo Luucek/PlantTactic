@@ -6,6 +6,7 @@ import com.google.gson.Gson
 import java.io.File
 import java.io.FileOutputStream
 
+
 class Room() {
 
     var name: String = ""
@@ -35,7 +36,7 @@ class Room() {
         fun loadSavedRooms(context: Context?): ArrayList<Room> {
 
             val path: String = context?.filesDir.toString() + "/rooms"
-            Log.d("Files", "Path: $path")
+            Log.d("Room", "Loaded path: $path")
 
             val directory = File(path)
             val files = directory.listFiles()
@@ -68,5 +69,14 @@ class Room() {
 
     fun addDevice(device: PotDevice) {
         this.devices.add(device)
+    }
+
+    fun delete(context: Context?) {
+        val path: String = context?.filesDir.toString() + "/rooms/"
+        val file = File(path + this.name)
+        if (file.exists()) {
+            file.delete()
+            Log.d("Room", "File: $file # DELETED")
+        } else Log.d("Room", "File: $file # NOT FOUND")
     }
 }

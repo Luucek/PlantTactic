@@ -36,8 +36,8 @@ class RoomFragment : Fragment(R.layout.fragment_room) {
 
             popup.setOnMenuItemClickListener { item: MenuItem ->
                 if (item.itemId == R.id.add_device_item) {
-                    view.findNavController()
-                        .navigate(R.id.action_roomFragment_to_addPotDeviceFragment)
+                    val action = RoomFragmentDirections.actionRoomFragmentToAddPotDeviceFragment(room.name)
+                    view.findNavController().navigate(action)
                 } else if (item.itemId == R.id.edit_room_item) {
                     val action = RoomFragmentDirections.actionRoomFragmentToEditRoomFragment(room.name)
                     view.findNavController().navigate(action)
