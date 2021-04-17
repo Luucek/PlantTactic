@@ -32,15 +32,7 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) :
         Log.d(TAG, "onBindViewHolder: called.")
 
         holder.roomName.text = rooms[position].name
-
-        //TODO: Change this to somehow permanently assign image to corresponding room
-        val imgs: TypedArray = context!!.resources.obtainTypedArray(R.array.images)
-        val rand = Random()
-        val rndInt = rand.nextInt(imgs.length())
-        val resID = imgs.getResourceId(rndInt, 0)
-        holder.roomImage.setImageResource(resID)
-
-        imgs.recycle()
+        holder.roomImage.setImageResource(rooms[position].imageID)
 
         holder.parentLayout.setOnClickListener { view ->
             Log.d(TAG, "onClick: clicked on: " + rooms[position].name)

@@ -18,10 +18,13 @@ class AddPotDeviceFragment : Fragment(R.layout.fragment_add_potdevice) {
         super.onViewCreated(view, savedInstanceState)
 
         button_add_pot_device.setOnClickListener {
-            val deviceName = edit_text_device_name.text.toString()
-            val imageName = edit_text_device_photo.text.toString()
 
-            val device = PotDevice(deviceName, imageName)
+            val deviceName = edit_text_device_name.text.toString().trimEnd()
+
+            //TODO: Let user choose device image
+//            val imageID = getImageID()
+
+            val device = PotDevice(deviceName, 0)
             val room = Room.getRoomFromName(this.context, args.roomName)
             room.addDevice(device)
             room.saveToFile(this.context)

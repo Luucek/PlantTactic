@@ -19,12 +19,25 @@ class EditRoomFragment : Fragment(R.layout.fragment_edit_room) {
 
         val room = Room.getRoomFromName(this.context, args.roomName)
 
+        edit_room_image.setImageResource(room.imageID)
+
+        edit_room_newimage.visibility = View.INVISIBLE
+
+        edit_room_save.setOnClickListener {
+
+            room.delete(this.context)
+            room.name = edit_room_newname.text.toString().trimEnd()
+            room.saveToFile(this.context)
+
+            view.findNavController().navigate(R.id.action_editRoomFragment_to_homeFragment)
+        }
+
         edit_room_delete.setOnClickListener {
 
             val builder = this.context?.let { it1 -> AlertDialog.Builder(it1) }
 
             builder?.setTitle(getString(R.string.dialog_title))
-            builder?.setMessage(getString(R.string.dialog_message))
+            builder?.setMessage(getString(R.string.dialog_message) + " " + room.name)
 
             builder?.setPositiveButton(android.R.string.ok) { _, _ ->
                 room.delete(this.context)

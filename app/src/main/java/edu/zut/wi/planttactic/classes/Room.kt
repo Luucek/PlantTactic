@@ -10,12 +10,12 @@ import java.io.FileOutputStream
 class Room() {
 
     var name: String = ""
-    var imageName: String = ""
+    var imageID: Int = 0
     var devices: ArrayList<PotDevice> = ArrayList()
 
-    constructor(name: String, imageName: String) : this() {
+    constructor(name: String, imageID: Int) : this() {
         this.name = name
-        this.imageName = imageName
+        this.imageID = imageID
     }
 
     fun getJSONstring(): String {

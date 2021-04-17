@@ -16,15 +16,15 @@
         android:layout_marginTop="40dp"
         android:contentDescription="@string/homeLogoDesc"
         android:scaleType="centerCrop"
-        app:srcCompat="@mipmap/room_1" />
+        app:srcCompat="@mipmap/logo" />
 
     <TextView
         android:id="@+id/rooms_list_header"
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_logo_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
         android:text="@string/user_rooms_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />

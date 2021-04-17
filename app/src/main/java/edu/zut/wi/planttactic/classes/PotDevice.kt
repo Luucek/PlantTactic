@@ -5,11 +5,11 @@ class PotDevice() {
 
     var id: Int = 0
     var name: String = ""
-    var imageName: String = ""
+    var imageID: Int = 0
 
-    constructor(name: String, imageName: String) : this() {
+    constructor(name: String, imageID: Int) : this() {
         this.name = name
-        this.imageName = imageName
+        this.imageID = imageID
     }
 
 }

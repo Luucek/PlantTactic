@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="6dp"
-        android:hint="@string/device_photo_text">
+        android:hint="@string/device_photo_text"
+        android:visibility="invisible">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_device_photo"
