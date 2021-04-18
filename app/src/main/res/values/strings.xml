@@ -11,25 +11,31 @@
     <string name="settings">Ustawienia</string>
     <string name="termsAndConditions">Warunki użytkowania</string>
     <string name="fab_more_desc">Przycisk z rozwijanym menu</string>
+    <string name="login_button_text">Zaloguj się</string>
+    <string name="logout_button_text">Wyloguj się</string>
 
     <!-- Text related to fragments names -->
 
     <string name="homeF">Dom</string>
-    <string name="loginF">Zaloguj się</string>
+    <string name="loginF">Logowanie</string>
+    <string name="registerF">Rejestracja</string>
     <string name="settingsF">Ustawienia</string>
     <string name="termsAndConditionsF">Warunki użytkowania</string>
     <string name="historyF">Historia</string>
     <string name="addRoomF">Dodaj pokój</string>
     <string name="addPotDeviceF">Dodaj Doniczkę</string>
 
-    <!-- Text related to Login fragment -->
+    <!-- Text related to Register fragment -->
 
-    <string name="login_button_text">Zaloguj się</string>
+    <string name="register_button_text">Rejestracja</string>
+    <string name="register_hint">Nie masz konta?</string>
+    <string name="register_text_button">Zarejestruj się.</string>
 
     <!-- Text related to Home fragment -->
 
     <string name="user_rooms_text">POKOJE</string>
     <string name="homeLogoDesc">Logo w górnej części HomeFragment</string>
+    <string name="login_hint">Najpierw się zaloguj.</string>
 
     <!-- Text related to Add Room fragment -->
 
@@ -57,5 +63,12 @@
     <string name="edit_room_newimage">Zdjecie pokoju</string>
     <string name="dialog_title">Usuń pokój</string>
     <string name="dialog_message">Ten pokój zostanie usunięty:</string>
+    <string name="login_user_email">Email</string>
+    <string name="login_user_password">Hasło</string>
+
+    <!-- Text relared to Toast messages  -->
+    <string name="logged_in">Zalogowano</string>
+    <string name="account_created">Konto zostało utworzone</string>
+    <string name="log_in_before">Najpierw się zaloguj</string>
 
 </resources>

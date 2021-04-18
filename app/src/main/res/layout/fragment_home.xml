@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/rooms_list_header"
-        android:layout_width="wrap_content" 
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_logo_image"
         android:layout_centerHorizontal="true"
@@ -28,6 +28,18 @@
         android:layout_marginBottom="16dp"
         android:text="@string/user_rooms_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/login_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rooms_list_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/login_hint"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="italic"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/roomsView"

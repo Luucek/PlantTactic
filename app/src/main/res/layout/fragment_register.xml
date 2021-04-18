@@ -10,7 +10,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="30dp"
-        tools:context=".fragments.LoginFragment">
+        tools:context=".fragments.RegisterFragment">
 
         <ImageView
             android:id="@+id/home_logo_image"
@@ -26,7 +26,7 @@
             android:src="@mipmap/logo" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_username_view"
+            android:id="@+id/register_username_view"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,63 +35,36 @@
             android:hint="@string/login_user_email">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_username"
+                android:id="@+id/register_text_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_password_view"
+            android:id="@+id/register_password_view"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/edit_username_view"
+            android:layout_below="@id/register_username_view"
             android:layout_marginBottom="6dp"
             android:hint="@string/login_user_password">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_text_password"
+                android:id="@+id/register_text_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:id="@+id/register_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edit_password_view"
-            android:layout_margin="10dp"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="3dp"
-                android:text="@string/register_hint"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/register_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:text="@string/register_text_button"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textStyle="italic|bold" />
-
-        </LinearLayout>
-
         <Button
-            android:id="@+id/button_login"
+            android:id="@+id/button_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/register_layout"
+            android:layout_below="@id/register_password_view"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="@string/login_button_text" />
+            android:text="@string/register_button_text" />
 
 
     </RelativeLayout>

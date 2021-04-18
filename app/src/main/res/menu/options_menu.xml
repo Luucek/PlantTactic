@@ -8,6 +8,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/logoutFragment"
+        android:title="@string/logout_button_text"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/settingsFragment"
         android:title="@string/settings"
         app:showAsAction="never" />

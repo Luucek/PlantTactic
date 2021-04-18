@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "279013816802",
+    "project_id": "planttactic",
+    "storage_bucket": "planttactic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279013816802:android:87601f01d9a68dc86421bb",
+        "android_client_info": {
+          "package_name": "edu.zut.wi.planttactic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279013816802-3ihdkk4m035430agfv4j0s6lv0aq3jsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkoq_Fla-fKyVNrp4TnCnxgxFaDrudmXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279013816802-3ihdkk4m035430agfv4j0s6lv0aq3jsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -29,7 +29,8 @@ class AddPotDeviceFragment : Fragment(R.layout.fragment_add_potdevice) {
             room.addDevice(device)
             room.saveToFile(this.context)
 
-            val action = AddPotDeviceFragmentDirections.actionAddPotDeviceFragmentToRoomFragment(room.name)
+            val action =
+                AddPotDeviceFragmentDirections.actionAddPotDeviceFragmentToRoomFragment(room.name)
             findNavController().navigate(action)
         }
     }

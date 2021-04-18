@@ -1,8 +1,6 @@
 package edu.zut.wi.planttactic
 
 import android.content.Context
-import android.content.res.TypedArray
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,14 +27,9 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d(TAG, "onBindViewHolder: called.")
-
         holder.roomName.text = rooms[position].name
         holder.roomImage.setImageResource(rooms[position].imageID)
-
         holder.parentLayout.setOnClickListener { view ->
-            Log.d(TAG, "onClick: clicked on: " + rooms[position].name)
-
             val action = RoomFragmentDirections.actionGlobalRoomFragment(rooms[position].name)
             view.findNavController().navigate(action)
         }
@@ -52,10 +45,6 @@ class RoomsViewAdapter(context: Context?, rooms: ArrayList<Room>) :
         var roomName: TextView = itemView.findViewById(R.id.room_name)
         var parentLayout: RelativeLayout = itemView.findViewById(R.id.parent_layout)
 
-    }
-
-    companion object {
-        private const val TAG = "RoomsViewAdapter"
     }
 
     init {

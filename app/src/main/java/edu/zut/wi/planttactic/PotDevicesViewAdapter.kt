@@ -15,13 +15,15 @@ import edu.zut.wi.planttactic.fragments.PotDeviceFragmentDirections
 import java.util.*
 
 
-class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) : RecyclerView.Adapter<PotDevicesViewAdapter.ViewHolder>() {
+class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) :
+    RecyclerView.Adapter<PotDevicesViewAdapter.ViewHolder>() {
 
     private var devices = ArrayList<PotDevice>()
     private val context: Context?
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.layout_device_listitem, parent, false)
+        val view: View = LayoutInflater.from(parent.context)
+            .inflate(R.layout.layout_device_listitem, parent, false)
         return ViewHolder(view)
     }
 
@@ -32,7 +34,8 @@ class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) : 
         holder.parentLayout.setOnClickListener { view ->
             Log.d(TAG, "onClick: clicked on: " + devices[position].name)
 
-            val action = PotDeviceFragmentDirections.actionGlobalPotDeviceFragment(devices[position].name)
+            val action =
+                PotDeviceFragmentDirections.actionGlobalPotDeviceFragment(devices[position].name)
             view.findNavController().navigate(action)
         }
     }

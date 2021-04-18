@@ -7,30 +7,27 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import edu.zut.wi.planttactic.R
-import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_register.*
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
-
-    lateinit var auth: FirebaseAuth
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        auth = FirebaseAuth.getInstance()
+        button_register.setOnClickListener {
+            val username = register_text_username.text.toString().trim { it <= ' ' }
+            val password = register_text_password.text.toString().trim { it <= ' ' }
 
-        button_login.setOnClickListener {
-            val username = edit_text_username.text.toString().trim { it <= ' ' }
-            val password = edit_text_password.text.toString().trim { it <= ' ' }
-
-            auth.signInWithEmailAndPassword(username, password)
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(
                             this.activity,
-                            getString(R.string.logged_in),
+                            getString(R.string.account_created),
                             Toast.LENGTH_SHORT
                         ).show()
-                        view.findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                        view.findNavController()
+                            .navigate(R.id.action_registerFragment_to_loginFragment)
                     } else {
                         Toast.makeText(
                             this.activity,
@@ -39,10 +36,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         ).show()
                     }
                 }
-        }
-
-        register_textview.setOnClickListener {
-            view.findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
     }
