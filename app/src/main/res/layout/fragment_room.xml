@@ -32,6 +32,7 @@
         android:layout_alignBottom="@id/devicesView"
         android:layout_margin="16dp"
         android:contentDescription="@string/fab_more_desc"
+        app:backgroundTint="@color/light_grey"
         app:menu="@menu/drawer_bottom_nav_menu"
         app:srcCompat="@drawable/ic_more_vert"
         app:tint="@color/colorPrimaryDark" />

@@ -61,6 +61,7 @@
         android:layout_alignBottom="@id/roomsView"
         android:layout_margin="16dp"
         android:contentDescription="@string/fab_more_desc"
+        app:backgroundTint="@color/light_grey"
         app:srcCompat="@drawable/ic_add"
         app:tint="@color/colorPrimaryDark" />
 
