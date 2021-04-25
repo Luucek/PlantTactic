@@ -3,7 +3,7 @@ package edu.zut.wi.planttactic.classes
 
 class PotDevice() {
 
-    var id: Int = 0
+    var id: String = ""
     var name: String = ""
     var imageID: Int = 0
 

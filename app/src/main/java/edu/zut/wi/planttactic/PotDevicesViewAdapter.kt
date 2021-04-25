@@ -32,8 +32,6 @@ class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) :
         holder.deviceName.text = devices[position].name
 
         holder.parentLayout.setOnClickListener { view ->
-            Log.d(TAG, "onClick: clicked on: " + devices[position].name)
-
             val action =
                 PotDeviceFragmentDirections.actionGlobalPotDeviceFragment(devices[position].name)
             view.findNavController().navigate(action)
@@ -49,10 +47,6 @@ class PotDevicesViewAdapter(context: Context?, devices: ArrayList<PotDevice>) :
         var deviceName: TextView = itemView.findViewById(R.id.device_name)
         var parentLayout: RelativeLayout = itemView.findViewById(R.id.parent_layout)
 
-    }
-
-    companion object {
-        private const val TAG = "PotDevicesViewAdapter"
     }
 
     init {

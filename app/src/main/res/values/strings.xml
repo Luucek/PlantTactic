@@ -24,6 +24,7 @@
     <string name="historyF">Historia</string>
     <string name="addRoomF">Dodaj pokój</string>
     <string name="addPotDeviceF">Dodaj Doniczkę</string>
+    <string name="potDeviceF">Doniczka</string>
 
     <!-- Text related to Register fragment -->
 
